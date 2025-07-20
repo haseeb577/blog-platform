@@ -1,0 +1,27 @@
+<h2>Edit Post</h2>
+
+<form [formGroup]="postForm" (ngSubmit)="updatePost()" style="max-width: 500px; margin: auto;">
+  <div style="margin-bottom: 1rem;">
+    <label for="title">Title:</label><br />
+    <input
+      id="title"
+      formControlName="title"
+      type="text"
+      style="width: 100%; padding: 0.5rem; border: 1px solid #ccc;"
+    />
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <label for="content">Content:</label><br />
+    <textarea
+      id="content"
+      formControlName="content"
+      rows="5"
+      style="width: 100%; padding: 0.5rem; border: 1px solid #ccc;"
+    ></textarea>
+  </div>
+
+  <button type="submit" style="padding: 0.5rem 1rem; background: #007bff; color: white; border: none;">
+    Update Post
+  </button>
+</form>
